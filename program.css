@@ -1,0 +1,218 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.couple-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+.couple-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Yellow color on hover */
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+.split-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.bride-column, .groom-column {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.bride-column img, .groom-column img {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the wedding program section */
+.wedding-program {
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+}
+
+.wedding-program h2 {
+    text-align: center;
+    font-family: 'Snell Roundhand', cursive;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.program-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.program-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Animation styles */
+.wedding-program::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent overlay */
+    z-index: -1; /* Ensure pseudo-element is behind the content */
+    animation: overlayAnimation 5s linear infinite;
+}
+
+@keyframes overlayAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.footer-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    animation: slideInUp 1s ease;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #ffc107;
+    color: #333;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #ffdb5a; /* Lighter yellow on hover */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .couple-photo {
+        margin-bottom: 20px;
+    }
+
+    .split-container {
+        flex-direction: column;
+    }
+
+    .bride-column, .groom-column {
+        min-width: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    .bride-column img, .groom-column img {
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Streaming Subscription - Joy & Peter's Wedding</title>
+    <link rel="stylesheet" href="stream.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+<header>
+    <div class="header-container">
+        <img src="https://ocdn.eu/images/pulscms/MzA7MDA_/278227727385c284e5aea113ef0553b7.jpg" alt="Wedding Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main-container">
+    <section class="subscription-section">
+        <h1>Wedding Streaming Subscription - Joy & Peter's Wedding</h1>
+        <p>Subscribe to watch Joy & Peter's wedding ceremony live online!</p>
+
+        <!-- Embedding the live stream -->
+        <div class="stream-container">
+            <!-- Replace the following iframe with your actual live stream embed code -->
+            <iframe src="https://www.youtube.com/embed/yourlivestreamid" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Subscription form -->
+        <div class="subscription-form">
+            <h2>Subscribe Now:</h2>
+            <form id="subscriptionForm">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="location">Your Location:</label><br>
+                <input type="text" id="location" name="location" required><br><br>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>For more information, please contact us via WhatsApp: +2347088525231</p>
+    </div>
+</footer>
+<!-- Include EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your User ID
+    emailjs.init('YOUR_USER_ID'); // Replace with your actual User ID from EmailJS
+
+    // Function to send Subscription email
+    function sendEmail(serviceID, templateID, formData) {
+        emailjs.send(serviceID, templateID, formData)
+            .then(function(response) {
+                console.log('Email sent successfully!', response.status, response.text);
+                alert('Thank you for Subscribing! We look forward to seeing you.');
+                document.getElementById('rsvpForm').reset(); // Reset the form after submission
+            }, function(error) {
+                console.error('Error sending email:', error);
+                alert('Oops! There was an issue sending your Subscription. Please try again later.');
+            });
+    }
+
+    // Handle form submission
+    document.getElementById('rsvpForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form data
+        var formData = {
+            name: this.name.value,
+            email: this.email.value,
+            location: this.location.value
+        };
+
+        // Call sendEmail function with your EmailJS service ID and template ID
+        sendEmail('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', formData);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+        /* Animation for the rotating ring */
+        @keyframes rotateRing {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Styles for the ring frame */
+        .ring-frame {
+            width: 200px;
+            height: 200px;
+            border: none;
+            border-radius: 50%;
+            margin: 2px auto;
+            animation: rotateRing 10s linear infinite; /* Apply rotation animation */
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            z-index: 2; /* Ensure it's on top of the slideshow */
+        }
+
+        .logo {
+            max-width: 60%;
+            max-height: 60%;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1 {
+            color:blue;
+            background: none;
+            position: left;
+            font-size: 28px;
+
+        }
+        h3 {
+            color:black;
+            background: white;
+        }
+        h2 {
+            color:none;
+            background: none;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slideshow-container img.active {
+            opacity: 1;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateY(0deg); /* Apply 3D rotation */
+            text-align: center;
+            z-index: 1;
+            color: white;
+            max-width: 800px; /* Adjust the max-width to your desired container width */
+            width: 90%; /* Fallback width for older browsers */
+            transform-style: preserve-3d; /* Maintain 3D effect on child elements */
+        }
+
+        .thumbnails {
+            white-space: nowrap;
+            animation: moveThumbnails 30s linear infinite;
+        }
+
+        .thumbnail {
+            width: auto;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .thumbnail img {
+            max-height: 150px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: gold;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @keyframes moveThumbnails {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Media query for smaller screens */
+        @media only screen and (max-width: 768px) {
+            .container {
+                max-width: none;
+                width: 100%;
+                padding: 0 20px; /* Add padding to prevent content from touching the edges */
+                transform: translate(-50%, -50%) rotateY(0deg); /* Apply 3D rotation */
+            }
+        }
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+body {
+  background: #111;
+}
+.hidden {
+  opacity:0;
+}
+.console-container {
+    font-family: 'Great Vibes', cursive; /* Specify the font-family */;
+    font-size: 3em; /* Adjust the font size as needed */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70px;
+    width: 350px;
+    position: absolute;
+    top: 30px; /* Adjust the top position to move text down from the top */
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+}
+
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
