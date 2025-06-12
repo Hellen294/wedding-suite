@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mary & Anthony's Moments</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(to bottom, #fff8f0, #ffe7e7);
+      color: #633a34;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffffcc;
+      padding: 0.8rem 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      font-family: 'Great Vibes', cursive;
+    }
+
+    header img {
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ffafcc;
+    }
+
+    .gallery-title {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-family: 'Snell Roundhand', cursive;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .frame {
+      background: #fff;
+      padding: 0.5rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+      transform: rotateX(2deg) rotateY(2deg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .frame:hover {
+      transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .frame img {
+      width: 100%;
+      border-radius: 10px;
+      border: 3px solid #ffcad4;
+      transition: transform 0.4s ease;
+    }
+
+    .frame img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Snell+Roundhand&family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>Mary & Anthony</h1>
+  <img src="https://i.pinimg.com/originals/e3/c2/99/e3c299c967d59e931d3cf20f94e0bc42.jpg" alt="Couple Logo">
+</header>
+
+<h2 class="gallery-title">Our Beautiful Moments Together 💕</h2>
+
+<div class="gallery">
+  <div class="frame"><img src="https://loveweddingsng.com/wp-content/uploads/2020/10/Peace-Daniels-Nigerian-PreWedding-Shoot-LH-Events-LoveWeddingsNG13.png" alt=""></div>
+  <div class="frame"><img src="https://loveweddingsng.com/wp-content/uploads/2019/07/Shade-and-Seuns-PreWedding-Shoot-THEJAGS2019-Klala-Photography-LoveWeddingsNG9.png" alt=""></div>
+  <div class="frame"><img src="https://ocdn.eu/images/pulscms/MzA7MDA_/278227727385c284e5aea113ef0553b7.jpg" alt=""></div>
+  <div class="frame"><img src="https://omastylebride.com/wp-content/uploads/2020/09/Photo-by-Samson-Ejim-trad.-OmaStyle-Bride.jpg" alt=""></div>
+  <div class="frame"><img src="https://ocdn.eu/images/pulscms/ZWY7MDA_/7c2d1e28093ef56e3c68f7f7b8bd15bd.jpg" alt=""></div>
+  <div class="frame"><img src="https://cdn0.hitched.co.uk/article/1272/3_2/1280/jpg/72721-2.webp" alt=""></div>
+  <div class="frame"><img src="https://www.weddingfeferity.com/wp-content/uploads/2021/07/frances-jide-pre-wedding-pictures-nigeria_0001.jpg" alt=""></div>
+  <div class="frame"><img src="https://loveweddingsng.com/wp-content/uploads/2013/08/Lucy-and-Wilfreds-Nigerian-PreWedding-Shoot-ASquare-Studios-LoveWeddingsNG-2.png" alt=""></div>
+  <div class="frame"><img src="https://i2.wp.com/www.palmfront.com/blog/wp-content/uploads/2017/10/11.png?resize=582%2C580&ssl=1" alt=""></div>
+  <div class="frame"><img src="https://partyslate.imgix.net/uploads/blog_articles/1809/photo-09dcff61-f7d5-4735-a1d3-656b422c4dfe.jpeg?ixlib=rails-2.1.4&w=1200&h=630" alt=""></div>
+  <div class="frame"><img src="https://todaysbride.ca/wp-content/uploads/2022/10/B7304351-600x400.jpg" alt=""></div>
+  <div class="frame"><img src="https://i.pinimg.com/736x/f4/b1/6e/f4b16e744293de4857da75fffb244b33.jpg" alt=""></div>
+  <div class="frame"><img src="https://www.nairaland.com/attachments/8081545_fac54b5014d422e49e90f913e92afb0d_jpegbe0d6aaf3db4024182248816cfdf79f7" alt=""></div>
+  <div class="frame"><img src="https://www.bellanaijaweddings.com/wp-content/uploads/2022/02/Faozyat-Abdul-Prewedding-BellaNaija-Weddings.07.jpg" alt=""></div>
+  <div class="frame"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_4QvWRHGu-3YU5KjuyZ5vwrjzOk6aD02lC2g1qLL3AwwGtdkyEabposHxSJsr8Jt6FjAd6aP3FpdM83xzcUDYjCngoBRVQxOu_vWT0S7pQsXwQzKNMgN77SPG_RNq_gvbvz6y7B0Q7nI/s1600/Northern-Power-Couples+(1).jpg" alt=""></div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Mary & Anthony | Pre-wedding Moments | MthCloud-Tech 💖</p>
+</footer>
+
+</body>
+</html>
