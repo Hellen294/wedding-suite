@@ -1,34 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the wedding of Joy weds Peter, hosted by MthCloud-Tech. Join us on 2024-2029 at Online for a celebration filled with love and joy. Explore our site for pre-wedding photos, live streaming for remote guests, and the option to contribute to our special day.">
-    <meta name="keywords" content="wedding, Joy weds Peter, 2024-2029, Online, pre-picture, live stream, donations, MthCloud-Tech">
-    <meta name="author" content="MthCloud-Tech">
-    <title>Wedding Suite - Joy weds Peter</title>
-    <link rel="stylesheet" href="index2.css">
-    <!-- Link your JavaScript file -->
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Snell+Roundhand&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the traditional wedding of Mary weds Anthony. Join us for a celebration filled with culture, love and joy.">
+  <meta name="keywords" content="wedding, Mary weds Anthony, traditional marriage, love, celebration">
+  <meta name="author" content="Wedding Planner">
+  <title>Mary weds Anthony</title>
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fdf5f7;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .ring-frame {
+      text-align: center;
+      padding: 1em;
+    }
+
+    .logo {
+      max-width: 120px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    audio {
+      display: none;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+      height: 320px;
+    }
+
+    .slides {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1.5s;
+    }
+
+    .slides.active {
+      opacity: 1;
+    }
+
+    .console-container {
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      font-size: 2.5em;
+      color: #c71585;
+      margin-top: 1em;
+    }
+
+    .container {
+      padding: 1.5em;
+      text-align: center;
+    }
+
+    .container h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2em;
+      color: #8b008b;
+    }
+
+    .thumbnails {
+      display: flex;
+      overflow-x: auto;
+      gap: 1em;
+      margin-top: 2em;
+      justify-content: center;
+      scroll-snap-type: x mandatory;
+    }
+
+    .thumbnail {
+      background: #ffe6f0;
+      padding: 1em;
+      border-radius: 20px;
+      min-width: 200px;
+      text-align: center;
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      scroll-snap-align: center;
+      transform: rotateY(10deg);
+      animation: moveSlide 10s linear infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes moveSlide {
+      0%   { transform: translateX(100%) rotateY(10deg); }
+      100% { transform: translateX(-100%) rotateY(10deg); }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 1.5em;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <!-- Ring frame for the logo -->
-    <div class="ring-frame">
-        <!-- Logo -->
-        <img class="logo" src="logo.png" alt="Wedding Logo">
-    </div>
-    <!-- Background Music -->
-    <audio autoplay loop>
-        <source src="song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <div class="slideshow-container">
+
+  <audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="slideshow-container">
         <img class="slides active" src="https://loveweddingsng.com/wp-content/uploads/2020/10/Peace-Daniels-Nigerian-PreWedding-Shoot-LH-Events-LoveWeddingsNG13.png" alt="Slide 1">
         <img class="slides" src="https://loveweddingsng.com/wp-content/uploads/2019/07/Shade-and-Seuns-PreWedding-Shoot-THEJAGS2019-Klala-Photography-LoveWeddingsNG9.png" alt="Slide 2">
         <img class="slides active" src="https://ocdn.eu/images/pulscms/MzA7MDA_/278227727385c284e5aea113ef0553b7.jpg" alt="Slide 1">
@@ -45,56 +145,40 @@
         <img class="slides active" src="https://www.bellanaijaweddings.com/wp-content/uploads/2022/02/Faozyat-Abdul-Prewedding-BellaNaija-Weddings.07.jpg" alt="Slide 1">
         <img class="slides" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_4QvWRHGu-3YU5KjuyZ5vwrjzOk6aD02lC2g1qLL3AwwGtdkyEabposHxSJsr8Jt6FjAd6aP3FpdM83xzcUDYjCngoBRVQxOu_vWT0S7pQsXwQzKNMgN77SPG_RNq_gvbvz6y7B0Q7nI/s1600/Northern-Power-Couples+(1).jpg" alt="Slide 2">
         <!-- Add more images here -->
+  </div>
+
+  <div class="console-container">
+    Mary weds Anthony
+  </div>
+
+  <div class="container">
+    <h1>You're invited to celebrate with us</h1>
+    <p>Discover our programme, location, live stream, and more below</p>
+
+    <div class="thumbnails">
+      <a href="programme.html" class="thumbnail">PROGRAMME</a>
+      <a href="location.html" class="thumbnail">VENUE & MAP</a>
+      <a href="donations.html" class="thumbnail">DONATIONS</a>
+      <a href="gallery.html" class="thumbnail">GALLERY</a>
+      <a href="live-stream.html" class="thumbnail">LIVE STREAM</a>
     </div>
-    <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
-    <div class="container">
-        <h1><span class="wedding-word"></span></h1>
-        <p>Welcome to the hub of extraordinary content and unforgettable digital experiences, curated especially for your joyous occasion!.</p>
-        <div class="thumbnails">
-            <a href="program.html" class="thumbnail">
+  </div>
 
-                <h3>PROGRAMME</h3>
-            </a>
-            <a href="location.html" class="thumbnail">
+  <footer>
+    &copy; 2025 Mary & Anthony | All Rights Reserved
+  </footer>
 
-                <h3>VENUES & MAPS</h3>
-            </a>
-            <a href="donate.html" class="thumbnail">
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slides');
 
-                <h3>DONATIONS</h3>
-            </a>
-            <a href="r.html" class="thumbnail">
+    function showSlides() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }
 
-                <h3>R.S.V.P.</h3>
-            </a>
-            <a href="stream.html" class="thumbnail">
-
-                <h3>LIVE STREAM</h3>
-            </a>
-        </div>
-    </div>
-
-    <footer>
-        <p>Follow Us:</p>
-        <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
-    </footer>
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("slides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.opacity = "0";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.opacity = "1";
-            setTimeout(showSlides, 10000); // Change slide every 10 seconds
-        }
-    </script>
-</body>
-</html>
+    setInterval(showSlides, 5000);
+  </script>
 </body>
 </html>
