@@ -8,7 +8,6 @@
   <meta name="author" content="MthCloud-Tech" />
   <title>Joy weds Peter - Akwa Ibom Wedding Program</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet" />
-<!-- ... head stays the same until <style> ... -->
 <style>
   body {
     margin: 0;
@@ -151,42 +150,40 @@
       font-size: 2.5rem;
     }
   }
- /* Snowflake and Ring Animations */
-.snowflake, .golden-ring {
-  position: fixed;
-  top: -50px;
-  z-index: 9999;
-  opacity: 0.3;
-  pointer-events: none;
-  animation: fall linear infinite;
-}
 
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
+  .snowflake, .golden-ring {
+    position: fixed;
+    top: -50px;
+    z-index: 9999;
+    opacity: 0.3;
+    pointer-events: none;
+    animation: fall linear infinite;
   }
-}
 
-.snowflake::before {
-  content: "❄";
-  font-size: 1em;
-  color: white;
-}
+  @keyframes fall {
+    to {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
 
-.golden-ring::before {
-  content: "💍";
-  font-size: 1.2em;
-  color: gold;
-}
- 
+  .snowflake::before {
+    content: "❄";
+    font-size: 1em;
+    color: white;
+  }
+
+  .golden-ring::before {
+    content: "💍";
+    font-size: 1.2em;
+    color: gold;
+  }
 </style>
-
 </head>
 <body>
 
   <!-- Background Music -->
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="song.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
@@ -243,26 +240,39 @@
   </footer>
 
   <script>
-    // Optional: Simple console greeting
     console.log("Welcome to Joy & Peter's Akwa Ibom Traditional Wedding Program 🎉");
+
+    // Attempt to play music after user interaction
+    const audio = document.getElementById('bgMusic');
+    window.addEventListener('load', () => {
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Wait for interaction
+          document.body.addEventListener('click', () => {
+            audio.play();
+          }, { once: true });
+        });
+      }
+    });
   </script>
-<script>
-function createFloatingElement(type) {
-  const el = document.createElement("div");
-  el.className = type;
-  el.style.left = Math.random() * 100 + "vw";
-  el.style.animationDuration = 5 + Math.random() * 10 + "s";
-  el.style.fontSize = (0.8 + Math.random() * 1.5) + "em";
-  document.body.appendChild(el);
 
-  setTimeout(() => el.remove(), 15000);
-}
+  <script>
+    function createFloatingElement(type) {
+      const el = document.createElement("div");
+      el.className = type;
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = 5 + Math.random() * 10 + "s";
+      el.style.fontSize = (0.8 + Math.random() * 1.5) + "em";
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 15000);
+    }
 
-setInterval(() => {
-  const type = Math.random() < 0.7 ? 'snowflake' : 'golden-ring'; // 70% snow, 30% ring
-  createFloatingElement(type);
-}, 800); // Every 0.8s
-</script>
+    setInterval(() => {
+      const type = Math.random() < 0.7 ? 'snowflake' : 'golden-ring';
+      createFloatingElement(type);
+    }, 800);
+  </script>
 
 </body>
 </html>
