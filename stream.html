@@ -1,93 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Streaming Subscription - Joy & Peter's Wedding</title>
-    <link rel="stylesheet" href="stream.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wedding Streaming - Mary & Anthony</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      color: #333;
+    }
+
+    audio {
+      display: none;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .header-container img {
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid #ffcad4;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin-left: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e91e63;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .main-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .main-container h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #d81b60;
+    }
+
+    .subscription-section p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .stream-container iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .subscription-form {
+      margin-top: 2rem;
+      background: #fff5f8;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .subscription-form h2 {
+      color: #d81b60;
+      margin-bottom: 1rem;
+    }
+
+    .subscription-form input[type="text"],
+    .subscription-form input[type="email"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .subscription-form input[type="submit"] {
+      background-color: #e91e63;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .subscription-form input[type="submit"]:hover {
+      background-color: #c2185b;
+    }
+
+    footer {
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+      font-size: 0.95rem;
+      color: #555;
+      border-top: 1px solid #ffcdd2;
+    }
+  </style>
 </head>
 <body>
-    <!-- Background Music -->
-    <audio autoplay loop>
-        <source src="song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 <header>
-    <div class="header-container">
-        <img src="https://ocdn.eu/images/pulscms/MzA7MDA_/278227727385c284e5aea113ef0553b7.jpg" alt="Wedding Logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="header-container">
+    <img src="https://ocdn.eu/images/pulscms/MzA7MDA_/278227727385c284e5aea113ef0553b7.jpg" alt="Mary & Anthony">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main class="main-container">
-    <section class="subscription-section">
-        <h1>Wedding Streaming Subscription - Joy & Peter's Wedding</h1>
-        <p>Subscribe to watch Joy & Peter's wedding ceremony live online!</p>
+  <section class="subscription-section">
+    <h1>Mary & Anthony's Wedding</h1>
+    <p>Join us online to witness the beautiful union of Mary & Anthony. Subscribe below to access the live stream.</p>
 
-        <!-- Embedding the live stream -->
-        <div class="stream-container">
-            <!-- Replace the following iframe with your actual live stream embed code -->
-            <iframe src="https://www.youtube.com/embed/yourlivestreamid" frameborder="0" allowfullscreen></iframe>
-        </div>
+    <div class="stream-container">
+      <!-- Replace with your actual YouTube Live link -->
+      <iframe src="https://www.youtube.com/embed/yourlivestreamid" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-        <!-- Subscription form -->
-        <div class="subscription-form">
-            <h2>Subscribe Now:</h2>
-            <form id="subscriptionForm">
-                <label for="name">Your Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Your Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="location">Your Location:</label><br>
-                <input type="text" id="location" name="location" required><br><br>
-                <input type="submit" value="Subscribe">
-            </form>
-        </div>
-    </section>
+    <div class="subscription-form">
+      <h2>Subscribe Now:</h2>
+      <form id="subscriptionForm">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="location">Your Location:</label><br>
+        <input type="text" id="location" name="location" required><br>
+
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer>
-    <div class="footer-container">
-        <p>For more information, please contact us via WhatsApp: +2347088525231</p>
-    </div>
+  <div class="footer-container">
+    <p>For more information, contact us on WhatsApp: +2347088525231</p>
+  </div>
 </footer>
-<!-- Include EmailJS SDK -->
+
+<!-- EmailJS Integration -->
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-    // Initialize EmailJS with your User ID
-    emailjs.init('YOUR_USER_ID'); // Replace with your actual User ID from EmailJS
+  emailjs.init('YOUR_USER_ID'); // Replace with your actual User ID
 
-    // Function to send Subscription email
-    function sendEmail(serviceID, templateID, formData) {
-        emailjs.send(serviceID, templateID, formData)
-            .then(function(response) {
-                console.log('Email sent successfully!', response.status, response.text);
-                alert('Thank you for Subscribing! We look forward to seeing you.');
-                document.getElementById('rsvpForm').reset(); // Reset the form after submission
-            }, function(error) {
-                console.error('Error sending email:', error);
-                alert('Oops! There was an issue sending your Subscription. Please try again later.');
-            });
-    }
+  function sendEmail(serviceID, templateID, formData) {
+    emailjs.send(serviceID, templateID, formData)
+      .then(function(response) {
+        alert('Thank you for Subscribing! We look forward to seeing you.');
+        document.getElementById('subscriptionForm').reset();
+      }, function(error) {
+        alert('Oops! There was an issue sending your Subscription. Please try again later.');
+      });
+  }
 
-    // Handle form submission
-    document.getElementById('rsvpForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+  document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        // Get form data
-        var formData = {
-            name: this.name.value,
-            email: this.email.value,
-            location: this.location.value
-        };
+    const formData = {
+      name: this.name.value,
+      email: this.email.value,
+      location: this.location.value
+    };
 
-        // Call sendEmail function with your EmailJS service ID and template ID
-        sendEmail('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', formData);
-    });
+    sendEmail('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', formData);
+  });
 </script>
 
 </body>
