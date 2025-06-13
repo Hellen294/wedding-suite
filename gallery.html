@@ -65,33 +65,41 @@
       font-family: 'Snell Roundhand', cursive;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1rem;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
 
-    .frame {
-      background: #fff;
-      padding: 0.5rem;
-      border-radius: 15px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-      transform: rotateX(2deg) rotateY(2deg);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 0.8s ease forwards;
-    }
+.frame {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #fff;
+  padding: 0.3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .frame:hover {
-      transform: rotateX(0deg) rotateY(0deg) scale(1.02);
-      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
-    }
+.frame:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
+}
 
-    .frame img {
-      width: 100%;
-      border-radius: 10px;
-      border: 3px solid #ffcad4;
-      transition: transform 0.4s ease;
-    }
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #ffcad4;
+  transition: transform 0.4s ease;
+}
+
 
     .frame img:hover {
       transform: scale(1.05);
