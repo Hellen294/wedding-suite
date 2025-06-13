@@ -8,129 +8,151 @@
   <meta name="author" content="MthCloud-Tech" />
   <title>Joy weds Peter - Akwa Ibom Wedding Program</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: #fffaf5;
-      color: #333;
-    }
+<!-- ... head stays the same until <style> ... -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #fffaf5;
+    color: #333;
+  }
 
-    header {
-      background-color: #fff0e5;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 4px solid #f7c59f;
+  header {
+    background-color: #fff0e5;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #f7c59f;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin: 10px 0;
+    color: #b85d09;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #8b4513;
+    font-weight: bold;
+  }
+
+  .header-container img {
+    max-height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .main-container {
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .split-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .bride-column,
+  .groom-column {
+    width: 280px;
+    height: 360px;
+    background: #fff8f0;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    perspective: 1000px;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    border: 5px solid #f7c59f;
+  }
+
+  .bride-column:hover,
+  .groom-column:hover {
+    transform: scale(1.05) rotateY(5deg);
+  }
+
+  .bride-column img,
+  .groom-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+  }
+
+  .wedding-program h2 {
+    font-family: 'Great Vibes', cursive;
+    color: #b85d09;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .program-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .program-list li {
+    background: #fff8f0;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 5px solid #ffaf73;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+  }
+
+  footer {
+    background-color: #fff0e5;
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid #f7c59f;
+  }
+
+  .contact-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #ff9248;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .contact-button:hover {
+    background-color: #e5722e;
+  }
+
+  @media (max-width: 600px) {
+    .split-container {
+      flex-direction: column;
+      align-items: center;
     }
 
     h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      margin: 10px 0;
-      color: #b85d09;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 10px;
-    }
-
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #8b4513;
-      font-weight: bold;
-    }
-
-    .header-container img {
-      max-height: 250px;
-      border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .main-container {
-      padding: 30px 10px;
-      text-align: center;
-    }
-
-    .split-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .bride-column img,
-    .groom-column img {
-      max-width: 250px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .wedding-program h2 {
-      font-family: 'Great Vibes', cursive;
-      color: #b85d09;
       font-size: 2.5rem;
-      margin-bottom: 20px;
     }
+  }
+</style>
 
-    .program-list {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .program-list li {
-      background: #fff8f0;
-      margin: 10px 0;
-      padding: 15px 20px;
-      border-radius: 10px;
-      border-left: 5px solid #ffaf73;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      text-align: left;
-    }
-
-    footer {
-      background-color: #fff0e5;
-      padding: 20px;
-      text-align: center;
-      border-top: 4px solid #f7c59f;
-    }
-
-    .contact-button {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #ff9248;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .contact-button:hover {
-      background-color: #e5722e;
-    }
-
-    @media (max-width: 600px) {
-      .split-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-      }
-    }
-  </style>
 </head>
 <body>
 
