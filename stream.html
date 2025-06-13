@@ -122,6 +122,35 @@
       color: #555;
       border-top: 1px solid #ffcdd2;
     }
+   /* Snowflake and Ring Animations */
+.snowflake, .golden-ring {
+  position: fixed;
+  top: -50px;
+  z-index: 9999;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.snowflake::before {
+  content: "❄";
+  font-size: 1em;
+  color: white;
+}
+
+.golden-ring::before {
+  content: "💍";
+  font-size: 1.2em;
+  color: gold;
+}
+ 
   </style>
 </head>
 <body>
@@ -203,6 +232,23 @@
 
     sendEmail('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', formData);
   });
+</script>
+<script>
+function createFloatingElement(type) {
+  const el = document.createElement("div");
+  el.className = type;
+  el.style.left = Math.random() * 100 + "vw";
+  el.style.animationDuration = 5 + Math.random() * 10 + "s";
+  el.style.fontSize = (0.8 + Math.random() * 1.5) + "em";
+  document.body.appendChild(el);
+
+  setTimeout(() => el.remove(), 15000);
+}
+
+setInterval(() => {
+  const type = Math.random() < 0.7 ? 'snowflake' : 'golden-ring'; // 70% snow, 30% ring
+  createFloatingElement(type);
+}, 800); // Every 0.8s
 </script>
 
 </body>
